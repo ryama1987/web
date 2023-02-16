@@ -1,0 +1,14 @@
+*.jpg
+*.jpeg
+*.png
+*.gif
+*.bmp
+*.svg
+*.ttf
+*.woff
+*.woff2
+*.webp
+
+*.env
+_old/*
+templates/*
