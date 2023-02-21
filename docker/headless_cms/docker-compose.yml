@@ -1,0 +1,25 @@
+# Compose fileのバージョン指定
+version: '3'
+
+# どんなコンテナを立ち上げるか
+services:
+
+ # ---------------------------------
+ # 動かすコンテナ
+ # ---------------------------------
+ app:
+   # どのポートを開いて繋ぐか。下記はコンテナの80番ポートを開いて、ホストの8080番につなぐ
+   # Window10の環境では既に80番ポートが埋まっている場合があるので
+   ports:
+     - "3000:30"
+   # 先ほど作ったDockerfileを使って、コンテナをビルドするという指定
+   build: ./docker/app
+   # コンテナの名前を指定
+   container_name: headless_cms_dev
+   # ローカルのディレクトリとコンテナ上のディレクトリのリンクを設定
+   # コンテナが作成されると src ディレクトリからコンテナの /var/www/html にアクセスすることができる
+   volumes:
+     - ./src:/var/www/html
+     - ./docker/app/000-default.conf:/etc/apache2/sites-enabled/000-default.conf
+     - ./docker/app/php.ini:/usr/local/etc/php/php.ini
+

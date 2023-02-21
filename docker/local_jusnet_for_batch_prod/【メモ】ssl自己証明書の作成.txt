@@ -1,0 +1,56 @@
+自己証明書の設定
+
+(1)自己証明書の作成手順
+①san.txt(subjectAltName)ファイルを作成
+subjectAltName = DNS:localhost,DNS:127.0.0.1
+
+②（opensslが入ったLinuxで）秘密キーを作成。
+※2048が標準のよう。
+openssl genrsa -des3 -out server.key 2048
+
+③CSRファイル作成
+openssl req -new -key server.key -out server.csr
+
+以下入力例
+----------------------------------------
+Country Name (2 letter code) [AU]:JP
+State or Province Name (full name) [Some-State]:Minato-ku
+Locality Name (eg, city) :Shimbash
+Organization Name (eg, company) [Internet Widgits Pty Ltd]:jusnet
+Organizational Unit Name (eg, section) :cc
+Common Name (e.g. server FQDN or YOUR name) :jusnet
+Email Address :(改行のみ)
+
+Please enter the following 'extra' attributes
+to be sent with your certificate request
+A challenge password :(改行のみ)
+An optional company name :(改行のみ)
+----------------------------------------
+
+④秘密キーからパスワード除去
+openssl rsa -in server.key -out server.key
+
+⑤証明書作成 SANファイルを -extfileで指定
+※-days　で10年間有効
+openssl x509 -req -days 3650 -in server.csr -signkey server.key -out server.crt -extfile san.txt
+
+
+(2)apacheの.confファイルに以下の内容を設定
+
+---------
+SSLEngine on
+SSLProtocol all -SSLv3
+SSLCipherSuite HIGH:MEDIUM:!aNULL:!MD5:!SEED:!IDEA
+SSLCertificateFile "/etc/ssl/self_ssl/server.crt"
+SSLCertificateKeyFile "/etc/ssl/self_ssl/server.key"
+---------
+
+※apacheだったら再起動、Dockerだったら再構築などする。
+
+
+(3)chromeの証明書にインポートする。
+https://jp.globalsign.com/support/ssl/config/cert-import-chrome.html
+
+
+[参考]
+https://broadshotx.hatenablog.com/entry/2022/02/14/142131

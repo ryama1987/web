@@ -1,0 +1,72 @@
+[
+  {
+    "name": "search",
+    "path": "/search",
+    "component": "/src/pages/search/index.vue",
+    "chunkName": "pages/search/index",
+    "_name": "_2714eff2"
+  },
+  {
+    "name": "archive-slug",
+    "path": "/archive/:slug",
+    "component": "/src/pages/archive/_slug/index.vue",
+    "chunkName": "pages/archive/_slug/index",
+    "_name": "_2e07f26e"
+  },
+  {
+    "name": "article-slug",
+    "path": "/article/:slug?",
+    "component": "/src/pages/article/_slug.vue",
+    "chunkName": "pages/article/_slug",
+    "_name": "_433be7fa"
+  },
+  {
+    "name": "author-slug",
+    "path": "/author/:slug",
+    "component": "/src/pages/author/_slug/index.vue",
+    "chunkName": "pages/author/_slug/index",
+    "_name": "_5b984390"
+  },
+  {
+    "name": "page-page",
+    "path": "/page/:page?",
+    "component": "/src/pages/page/_page.vue",
+    "chunkName": "pages/page/_page",
+    "_name": "_46d3fc75"
+  },
+  {
+    "name": "tag-slug",
+    "path": "/tag/:slug",
+    "component": "/src/pages/tag/_slug/index.vue",
+    "chunkName": "pages/tag/_slug/index",
+    "_name": "_8a7053be"
+  },
+  {
+    "name": "archive-slug-page-page",
+    "path": "/archive/:slug?/page/:page?",
+    "component": "/src/pages/archive/_slug/page/_page.vue",
+    "chunkName": "pages/archive/_slug/page/_page",
+    "_name": "_4007e687"
+  },
+  {
+    "name": "author-slug-page-page",
+    "path": "/author/:slug?/page/:page?",
+    "component": "/src/pages/author/_slug/page/_page.vue",
+    "chunkName": "pages/author/_slug/page/_page",
+    "_name": "_7574e3c0"
+  },
+  {
+    "name": "tag-slug-page-page",
+    "path": "/tag/:slug?/page/:page?",
+    "component": "/src/pages/tag/_slug/page/_page.vue",
+    "chunkName": "pages/tag/_slug/page/_page",
+    "_name": "_b32023a2"
+  },
+  {
+    "name": "index",
+    "path": "/",
+    "component": "/src/pages/index.vue",
+    "chunkName": "pages/index",
+    "_name": "_1479741b"
+  }
+]

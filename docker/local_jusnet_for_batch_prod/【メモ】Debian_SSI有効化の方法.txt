@@ -1,0 +1,22 @@
+DockerがDebian（ubuntu）だった場合のSSI有効化の方法
+
+#ディレクトリを移動
+cd /etc/apache2/mods-available
+
+#一覧表示
+ls -l
+
+#以下のファイルがあるか確認
+cat include.load
+
+#以下catでの表示
+LoadModule include_module /usr/lib/apache2/modules/mod_include.so
+
+#以下を実行
+/usr/sbin/a2enmod include
+
+#再起動で有効化
+server apache2 restart
+
+[参考]
+https://kazuhira-r.hatenablog.com/entry/20160220/1455969641

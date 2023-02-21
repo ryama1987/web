@@ -1,0 +1,8 @@
+version: '3'
+
+services:
+  pip:
+    build: .
+    ports:
+      - "8100:100"
+    tty: true

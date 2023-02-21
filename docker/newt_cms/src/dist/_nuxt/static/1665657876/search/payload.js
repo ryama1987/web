@@ -1,0 +1,1 @@
+__NUXT_JSONP__("/search", {data:[{}],fetch:{},mutations:[["setApp",{name:"Blog2",uid:"blog2",icon:{type:"emoji",value:"✌️"},cover:{type:"image",value:"https:\u002F\u002Fstorage.googleapis.com\u002Fnewt-images\u002F618884b9b2f01f00183628e7%2F61edf6d5ee0ab10018964218%2Fcovers%2F1663668937942%2Fblog2.jpg"}}]]});

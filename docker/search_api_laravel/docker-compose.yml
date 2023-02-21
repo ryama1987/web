@@ -1,0 +1,28 @@
+version: '3'
+
+services:
+  app:
+    build: ./web/
+    container_name: laravel_api_app
+    ports:
+      - "8011:11"
+    volumes:
+      - "../../GitHub/search_api:/var/www/localhost/htdocs/"
+    tty: true
+  db:
+     build: ./db/
+     container_name: laravel_api_db
+     
+     environment:
+       MYSQL_ROOT_PASSWORD: root
+       MYSQL_DATABASE: jusnet_db
+       MYSQL_USER: api_user
+       MYSQL_PASSWORD: pass1234
+       TZ: 'Asia/Tokyo'
+
+     command: mysqld --character-set-server=utf8 --collation-server=utf8_unicode_ci
+     volumes:
+      - "./db/data:/var/lib/mysql"
+     # - "./db/my.cnf:/etc/mysql/conf.d/my.cnf"
+     ports:
+     - 3306:3306

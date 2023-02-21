@@ -1,0 +1,10 @@
+SELECT Id,Name,Catch__c,Prefecture1__c,City1__c FROM api_jobinfo WHERE MATCH (Catch__c, BusinessContents__c, Qualification__c, ApplyRequirement__c, Requirement__c, Prefecture1__c, City1__c) AGAINST ('大阪府　公認会計士' IN BOOLEAN MODE)
+
+
+
+
+
+ALTER TABLE api_jobinfo ADD FULLTEXT fti_all (Catch__c, BusinessContents__c, Qualification__c, ApplyRequirement__c, Requirement__c, Prefecture1__c, City1__c);
+
+
+C:\Users\ren.ishiyama\Documents\Docker\search_api

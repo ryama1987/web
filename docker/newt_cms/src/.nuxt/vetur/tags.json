@@ -1,0 +1,23 @@
+{
+  "ArticleCard": {
+    "description": "Auto imported from components/ArticleCard.vue"
+  },
+  "Badge": {
+    "description": "Auto imported from components/Badge.vue"
+  },
+  "Cover": {
+    "description": "Auto imported from components/Cover.vue"
+  },
+  "Footer": {
+    "description": "Auto imported from components/Footer.vue"
+  },
+  "Header": {
+    "description": "Auto imported from components/Header.vue"
+  },
+  "Pagination": {
+    "description": "Auto imported from components/Pagination.vue"
+  },
+  "Side": {
+    "description": "Auto imported from components/Side.vue"
+  }
+}
