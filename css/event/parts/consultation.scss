@@ -1,0 +1,478 @@
+/*===============================================
+event_consultation
+/*=============================================*/
+.consul-mv {
+	img {
+		width: 100%;
+	}
+}
+
+.day--block {
+  border: 1px solid #ac8f38;
+  padding: 30px;
+  display: flex;
+  align-items: center;
+  background: #f9f9f5;
+
+  h4 {
+    width: 133px;
+    color: #fff;
+    background: #ac8f38;
+    font-size: 1.5rem;
+    margin: 0 30px 0 0;
+    padding: 58px 10px;
+    text-align: center;
+  }
+}
+
+.job--list {
+	display: flex;
+	flex-wrap: wrap;
+	padding: 2rem;
+	box-shadow: 0 3px 10px #c1c1c1;
+	margin-bottom: 3.5rem;
+	h4 {
+		background: #00255c;
+    color: #ffffff;
+    padding: 0.5rem 2rem;
+	}
+	h5 {
+		width: 100%;
+		font-size: 1.7rem;
+		color: #01265d;
+		margin-bottom: 10px;
+	}
+		
+	p {
+		margin-bottom: 0;
+	}
+	.contents {
+		background: #ffffff;
+		width: 100%;
+		display: flex;
+		justify-content: space-between;
+		border: solid 1px #e2e2e2;
+		padding: 2rem;
+		ul:not(.job-info) {
+			background: #f5f6f9;
+			width: calc(100%/2 - 2rem);
+			padding: 1.5rem;
+			li {
+				position: relative;
+				padding-left: 1.2em;
+				font-size: 1.3rem;
+
+				&:before {
+					position: absolute;
+					left: 0;
+					top: 0;
+					content: '・';
+				}
+			}
+		}
+		ul.job-info {
+			width: calc(100%/2 - 2rem);
+			height: max-content;
+			li {
+				display: flex;
+				flex-wrap: nowrap;
+				align-content: center;
+				padding: 5px 0;
+				border-bottom: dotted 1px #03285f;
+				span.title {
+					color: #01265d;
+					font-weight: bold;
+					max-width: 120px;
+					width: 100%;
+				}
+				span.title + span {
+					width: 100%;
+				}
+			}
+		}
+	}
+}
+
+.days--cnt {
+	margin-left: 30px;
+
+	li {
+		position: relative;
+		margin-bottom: 6px;
+		padding-left: 1.5em;
+		font-size: 1.5rem;
+		letter-spacing: .06em;
+		line-height: 1.3333;
+
+		&:first-child {
+			margin-top: 6px;
+		}
+	}
+}
+
+.event--nav--01 {
+  border-top: 1px solid #00255c;
+  margin-top: 50px;
+  padding-top: 50px;
+
+  nav {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  a {
+    margin: 0 15px;
+  }
+}
+
+.btn--wrap div a.btn {
+  display: block;
+  width: 70%;
+  margin: 0 auto;
+}
+
+.consul-case-area {
+	padding: 2rem;
+	background: #f2f5f9;
+	.catch-title {
+		padding: 1rem 0;
+		font-size: 2rem;
+		font-weight: 600;
+		color: #00255c;
+		background: #f2f5f9;
+		line-height: 1.4;
+		border: none;
+	}
+	.case-detail {
+		display: flex;
+		justify-content: space-between;
+		align-items: flex-start;
+
+		img {
+			width: 222px;
+		}
+
+		.profile-cnt {
+			width: 900px;
+
+			p {
+				color: #fff;
+				background: #00255c;
+				font-size: 1.7rem;
+				font-weight: 400;
+				padding: 10px 20px;
+				margin: 0;
+
+				span {
+					margin-right: 1em;
+				}
+			}
+
+			.comparison {
+				margin-top: 20px;
+				display: flex;
+				justify-content: space-between;
+
+				.before, .after {
+					position: relative;
+					width: 367px;
+					border: 1px solid rgba(187, 187, 187, 0.5);
+					padding: 20px 20px;
+					background: #fff;
+				}
+
+				.before h5, .after h5 {
+					margin: 0;
+					font-size: 1.5rem;
+					text-align: center;
+					color: #fff;
+					background: #ccc;
+					padding: 10px 0;
+				}
+
+				.before ul li, .after ul li {
+					position: relative;
+					font-size: 1.5rem;
+					padding: 10px 0 10px 4.75em;
+					border-bottom: 1px dotted rgba(0, 0, 0, 0.25);
+				}
+
+				.before ul li:last-child, .after ul li:last-child {
+					border-bottom: none;
+					padding-bottom: 0;
+				}
+
+				.before ul li .title, .after ul li .title {
+					position: absolute;
+					left: .25em;
+					top: 10px;
+				}
+
+				.before ul li .title:after {
+					content: '：';
+					margin: 0 .25em;
+				}
+
+				.after {
+					ul li .title:after {
+						content: '：';
+						margin: 0 .25em;
+					}
+
+					h5 {
+						background: #ad902f;
+					}
+
+					&:before {
+						position: absolute;
+						left: -130px;
+						top: 56px;
+						content: '';
+						width: 94px;
+						height: 72px;
+						background: url(https://img.jusnet.co.jp/career/event/salary-arrow_navy.svg) no-repeat center;
+						background-size: contain;
+					}
+				}
+			}
+		}
+	}
+	.case-point {
+		margin-top: 50px;
+		border-top: 2px solid #ad902f;
+		border-bottom: 2px solid #ad902f;
+		background: #fffefd;
+		padding: 30px;
+
+		h4 {
+			margin-top: 0;
+
+			.point {
+				color: #fff;
+				background: #ad902f;
+				padding: 8px 12px;
+				font-size: 1.7rem;
+				-moz-border-radius: 5px;
+				-webkit-border-radius: 5px;
+				border-radius: 5px;
+			}
+
+			.point--ttl {
+				color: #ad902f;
+				font-size: 2.1rem;
+				margin-left: 15px;
+			}
+		}
+
+		ul.p-list {
+			margin-top: 20px;
+
+			li {
+				position: relative;
+				padding-left: 30px;
+				letter-spacing: .05em;
+				margin-bottom: 10px;
+
+				&:last-child {
+					margin-bottom: 0px;
+				}
+
+				&:before {
+					position: absolute;
+					left: 0;
+					top: 6px;
+					content: '';
+					display: block;
+					width: 20px;
+					height: 18px;
+					background: url(https://img.jusnet.co.jp/career/case/icon-point.svg) no-repeat left center;
+					background-size: contain;
+				}
+			}
+		}
+	}
+	.border--box.white {
+		background: #ffffff;
+	}
+}
+
+@media only screen and (max-width: 767px) {
+	.job--list {
+		padding: 1rem;
+		h4 {
+			background: #00255c;
+			color: #ffffff;
+			padding: 0.5rem 2rem;
+		}
+		h5 {
+			font-size: 1.4rem;
+		}
+		.contents {
+			display: block;
+			padding: 1rem;
+			ul:not(.job-info) {
+				width: 100%;
+				padding: 1rem;
+			}
+			ul.job-info {
+				width: 100%;
+				margin: 1rem 0;
+				li {
+					span.title {
+						max-width: 85px;
+						width: 100%;
+					}
+				}
+			}
+		}
+	}
+	
+  .day--block {
+    display: block;
+    padding: 15px;
+
+    h4 {
+      width: 100%;
+      padding: 10px;
+      margin-bottom: 10px;
+      font-size: 1.3rem;
+    }
+  }
+	
+  .event--nav--01 {
+    padding-top: 20px;
+
+    a {
+      width: 100%;
+      margin: 6px 0 0;
+    }
+  }
+
+  .btn--wrap div a.btn {
+    width: 100%;
+  }
+	
+	.consul-case-area {
+		padding: 1rem;
+		.catch-title {
+			padding: 1.4rem 0;
+    	font-size: 1.6rem;
+		}
+		.case-detail {
+			margin-top: 20px;
+			display: block;
+			
+			img {
+				display: block;
+				width: 90px;
+				margin: 0 auto;
+			}
+
+			.profile-cnt {
+				width: 100%;
+				margin-top: 12px;
+
+				p {
+					font-size: 1.3rem;
+					padding: 8px;
+
+					span {
+						margin-right: 1em;
+
+						&:last-child {
+							margin-right: 0;
+						}
+					}
+				}
+
+				.comparison {
+					margin-top: 12px;
+					display: block;
+
+					.before, .after {
+						position: relative;
+						width: 100%;
+						padding: 15px;
+					}
+
+					.before h5, .after h5 {
+						font-size: 1.3rem;
+						padding: 6px 0;
+					}
+
+					.before ul li, .after ul li {
+						position: relative;
+						font-size: 1.3rem;
+						padding: 5px 0 5px 4.75em;
+					}
+
+					.before ul li .title:after {
+						content: ':';
+						margin: 0 .25em;
+					}
+
+					.after {
+						ul li .title:after {
+							content: ':';
+							margin: 0 .25em;
+						}
+
+						margin-top: 65px;
+
+						&:before {
+							left: 50%;
+							margin-left: -23px;
+							top: -50px;
+							content: '';
+							display: block;
+							width: 47px;
+							height: 36px;
+							-moz-transform: rotate(90deg);
+							-ms-transform: rotate(90deg);
+							-webkit-transform: rotate(90deg);
+							transform: rotate(90deg);
+						}
+					}
+				}
+			}
+		}
+		
+		.case-point {
+			margin-top: 10px;
+			width: auto;
+			padding: 15px;
+
+			h4 {
+				.point {
+					padding: 2px 8px;
+					font-size: 1.1rem;
+					-moz-border-radius: 3px;
+					-webkit-border-radius: 3px;
+					border-radius: 3px;
+				}
+
+				.point--ttl {
+					font-size: 1.5rem;
+					margin-left: 6px;
+				}
+			}
+
+			ul.p-list {
+				margin-top: 10px;
+
+				li {
+					font-size: 1.3rem;
+					line-height: 1.5;
+					margin-bottom: 5px;
+
+					&:before {
+						top: 4px;
+						width: 14px;
+						height: 12px;
+					}
+				}
+			}
+		}
+	}
+}

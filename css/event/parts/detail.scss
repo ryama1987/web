@@ -1,0 +1,150 @@
+@charset "utf-8";
+
+/*===============================================
+event_detail
+/*=============================================*/
+
+
+img.logo {
+  width: 25%;
+}
+
+.entrybtn-box {
+  margin-bottom: 50px;
+  display: flex;
+
+  a {
+    max-width: 600px;
+		width: 100%;
+		display: block;
+		text-align: center;
+		padding: 20px;
+		font-size: 2.2rem;
+		text-decoration: none;
+		background: $jc-color;
+		color: #ffffff;
+		margin: 1rem auto;
+		border: 1px solid $jc-color;
+		position: relative;
+
+    &:hover {
+      background: #ffffff;
+      color: $jc-color;
+    }
+
+    &::after {
+      content: '';
+      background: url(https://img.jusnet.co.jp/career/common/icon-arrow-right-white.svg) no-repeat center;
+      width: 8px;
+      height: 100%;
+      position: absolute;
+      top: 1px;
+      right: 25px;
+    }
+
+    &:hover::after {
+      background: url(https://img.jusnet.co.jp/career/common/icon-arrow-right-navy.svg) no-repeat center;
+    }
+
+    &:nth-child(2n) {
+      margin-left: 40px;
+    }
+		
+		&.report {
+			background-color: #14a56d;
+			border: 1px solid #14a56d;
+			
+			&:hover {
+				color: #fff;
+				opacity: 0.9;
+			}
+			&:hover::after {
+      	background: url(https://img.jusnet.co.jp/career/common/icon-arrow-right-white.svg) no-repeat center;
+    	}
+		}
+  }
+}
+
+.title.event_seminar {
+	font-size: 1.8rem;
+	
+	.ttl {
+		background: #656565;
+		color: #ffffff;
+		padding: 1rem;
+		margin: 1rem 0 2rem 0;
+		display: inline-block;
+	}
+	
+	.date--detail {
+		font-size: 1.8rem;
+	}
+}
+
+.seminarbg {
+	background-color: $seminar--bgcolor;
+	padding: 2rem;
+	border: 1px solid #dedede;
+	h4 {
+		font-size: 1.7rem;
+    font-weight: 600;
+		color: #1f1f1f;
+		margin: 0;
+	}
+	h5,h4 {
+		margin-bottom: 1rem;
+		text-decoration: underline;
+		&:first-of-type {
+		margin-top: 1rem;
+		}
+	}
+}
+
+@media only screen and (max-width: 767px) {
+  .event--slider--02 .event--list li figure {
+    height: auto;
+
+    img.logo {
+      padding: 8vw 0;
+      width: 100px;
+    }
+  }
+
+  .entrybtn-box{
+    margin-bottom: 20px;
+    display: block;
+
+    a {
+      font-size: 1.3rem;
+      padding: 10px;
+      margin-bottom: 5px;
+
+      &::after {
+        width: 6px;
+        right: 4%;
+      }
+
+      &:last-child {
+        margin: 0;
+      }
+    }
+  }
+	
+	.title.event_seminar {
+		.ttl {
+			margin: 1rem 0 1rem 0;
+		}
+
+		.date--detail {
+			font-size: 1.4rem;
+		}
+	}
+	
+	.seminarbg {
+		padding: 1rem;
+		margin: 1.5rem auto;
+		h5 {
+			font-size: 1.4rem;
+		}
+	}
+}

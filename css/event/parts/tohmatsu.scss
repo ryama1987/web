@@ -1,0 +1,37 @@
+@charset "utf-8";
+
+/*===============================================
+seminar_tohmatsu
+/*=============================================*/
+
+table td .point {
+  position: relative;
+  margin-top: 25px;
+  border: 1px solid #92d146;
+  background: #fff;
+  padding: 30px;
+
+  h5 {
+    width: 195px;
+    display: inline-block;
+    padding: 5px;
+    color: #fff;
+    background: url(https://img.jusnet.co.jp/career/search/point-bg.svg) no-repeat center;
+    background-size: contain;
+    text-align: center;
+    right: 50px;
+    position: relative;
+    font-size: 1.5rem;
+  }
+}
+
+@media only screen and (max-width: 767px) {
+  table td .point {
+    padding: 20px;
+
+    h5 {
+      font-size: 1.3rem;
+      margin-bottom: 10px;
+    }
+  }
+}

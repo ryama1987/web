@@ -1,0 +1,49 @@
+$jc-color: #00255c;
+
+$seminar--bgcolor: #f9f9f9;
+
+$gt-color1: #f4f2fa;
+$gt-color2: #713f9a;
+$gt-color3: #6f3d9a;
+$gt-color4: #9e76be;
+
+$ey-color1: #fff7e2;
+$ey-color2: #ffb400;
+
+$kpmg-color1: #e7efff;
+$kpmg-color2: #013088;
+
+$pwc-color1: #f9e5d6;
+$pwc-color2: #fb6d05;
+
+$attention-color: #eb3716;
+$theme-color: #02275e;
+
+
+@mixin bgtemplate1($color) {
+	background: $color !important;
+	color: #ffffff !important;
+}
+
+@mixin cltemplate1($color,$weight) {
+	color: $color !important;
+	font-weight: $weight !important;
+}
+
+.gtbgcl{
+	@include bgtemplate1($gt-color2);
+}
+.eybgcl{
+	@include bgtemplate1($ey-color2);
+}
+.kpmgcl{
+	@include bgtemplate1($kpmg-color2);
+}
+
+.attentioncl{
+	@include cltemplate1($attention-color, bold);
+}
+
+.themecl{
+	@include cltemplate1($theme-color, bold);
+}

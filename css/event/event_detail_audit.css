@@ -1,0 +1,670 @@
+@charset "UTF-8";
+/* イベントページ詳細 監査法人特集用*/
+.gtbgcl {
+  background: #713f9a !important;
+  color: #ffffff !important; }
+
+.eybgcl {
+  background: #ffb400 !important;
+  color: #ffffff !important; }
+
+.kpmgcl {
+  background: #013088 !important;
+  color: #ffffff !important; }
+
+/*===============================================
+event_common
+/*=============================================*/
+h4.type2 {
+  border-left: 5px solid #00255c;
+  text-indent: 1rem; }
+
+.mainVisual {
+  margin: 0 auto; }
+  .mainVisual img {
+    width: 100%; }
+  .mainVisual.m-size img {
+    max-width: 950px;
+    width: 100%;
+    display: block;
+    margin: 0 auto; }
+  .mainVisual.feature img {
+    max-width: 640px;
+    width: 100%;
+    display: block;
+    margin: 0 auto; }
+  .mainVisual.logo img {
+    max-width: 600px;
+    width: 100%;
+    display: block;
+    margin: 0 auto; }
+  .mainVisual.logo-min img {
+    max-width: 235px;
+    width: 100%;
+    display: block;
+    margin: 0 auto 5rem; }
+
+.seminar-info {
+  display: block;
+  margin: 0 auto;
+  width: 100%;
+  padding: 1rem;
+  background: #e5efff;
+  text-align: center; }
+  .seminar-info p {
+    color: #00255c;
+    font-weight: bold;
+    font-size: 1.8rem;
+    margin-bottom: 0; }
+    .seminar-info p br {
+      display: none; }
+  .seminar-info.left {
+    text-align: left !important; }
+    .seminar-info.left p {
+      margin-bottom: 1rem; }
+      .seminar-info.left p br {
+        display: block; }
+
+.logo--box {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap; }
+  .logo--box li {
+    display: block;
+    width: calc(100%/3 - 20px);
+    padding: 1.5rem;
+    box-shadow: 5px 5px 3px #dedede;
+    margin: 1rem; }
+    .logo--box li figure {
+      display: block;
+      color: #ffffff;
+      padding: 1rem;
+      text-align: center; }
+      .logo--box li figure img {
+        width: auto;
+        max-height: 100px; }
+        .logo--box li figure img.ajust {
+          padding: 2rem; }
+    .logo--box li p {
+      display: block;
+      width: 100%;
+      padding: 1.5rem 0;
+      text-align: center; }
+      .logo--box li p:hover {
+        cursor: pointer; }
+  .logo--box a:hover {
+    cursor: pointer; }
+
+.modal-wrapper {
+  z-index: 999;
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  padding: 40px 10px;
+  text-align: center; }
+  .modal-wrapper:not(.target) {
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity .3s, visibility .3s; }
+  .modal-wrapper.target {
+    opacity: 1;
+    visibility: visible;
+    transition: opacity .4s, visibility .4s; }
+  .modal-wrapper::after {
+    display: inline-block;
+    height: 100%;
+    margin-left: -.05em;
+    vertical-align: middle;
+    content: ""; }
+  .modal-wrapper .modal-window {
+    box-sizing: border-box;
+    display: inline-block;
+    z-index: 20;
+    position: relative;
+    width: calc(100% - 3vw);
+    max-width: 800px;
+    padding: 1rem 2rem;
+    border-radius: 2px;
+    background: #fff;
+    box-shadow: 0 0 30px rgba(0, 0, 0, 0.6);
+    vertical-align: middle; }
+    .modal-wrapper .modal-window .modal-content {
+      max-height: 80vh;
+      overflow-y: auto;
+      text-align: left; }
+      .modal-wrapper .modal-window .modal-content p {
+        text-align: left; }
+  .modal-wrapper .modal-overlay {
+    z-index: 10;
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background: rgba(0, 0, 0, 0.8); }
+  .modal-wrapper .modal-close {
+    z-index: 20;
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 35px;
+    color: #95979c !important;
+    font-size: 20px;
+    font-weight: 700;
+    line-height: 35px;
+    text-align: center;
+    text-decoration: none;
+    text-indent: 0; }
+    .modal-wrapper .modal-close:hover {
+      color: #2b2e38 !important;
+      cursor: pointer; }
+
+.boxstyle {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  margin-bottom: 20px; }
+  .boxstyle.col2 .item {
+    width: calc(100%/2 - 1rem); }
+    .boxstyle.col2 .item:nth-child(2n) {
+      margin-left: 2rem; }
+  .boxstyle.col3 .item {
+    width: calc(100%/3 - 1rem); }
+    .boxstyle.col3 .item:nth-child(3n-1) {
+      margin: 0 1rem; }
+
+.boxstyle-cmn {
+  border: 1px solid #e9d490;
+  padding: 1.5rem; }
+  .boxstyle-cmn h4, .boxstyle-cmn h5 {
+    color: #ad902f; }
+
+.days--cnt li {
+  position: relative;
+  margin-bottom: 6px;
+  padding-left: 1.5em; }
+  .days--cnt li:last-child {
+    margin-bottom: 0; }
+  .days--cnt li:before {
+    position: absolute;
+    left: 0;
+    top: 9px;
+    content: '';
+    width: 16px;
+    height: 12px;
+    background: url(https://img.jusnet.co.jp/career/event/renew/icon-check.svg) no-repeat center;
+    background-size: contain; }
+
+.voices {
+  margin: 0 auto 2rem 0;
+  padding: 30px;
+  background: #f7f7f7; }
+  .voices li {
+    position: relative;
+    padding-left: 1.75em;
+    margin-top: 10px; }
+    .voices li:before {
+      position: absolute;
+      left: 0;
+      top: 4px;
+      display: block;
+      content: '';
+      width: 24px;
+      height: 20px;
+      background: url(https://img.jusnet.co.jp/career/event/renew/icon-voices-green.png) no-repeat center;
+      background-size: contain; }
+
+.voices--list li {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 30px; }
+  .voices--list li figure {
+    width: 120px; }
+  .voices--list li .txt {
+    position: relative;
+    width: 1030px;
+    border: 1px solid #01265d;
+    padding: 30px; }
+    .voices--list li .txt p {
+      margin: 0; }
+    .voices--list li .txt:before {
+      position: absolute;
+      left: -7px;
+      top: 47%;
+      content: '';
+      display: inline-block;
+      width: 12px;
+      height: 12px;
+      background: #fff;
+      border-left: 1px solid #01265d;
+      border-bottom: 1px solid #01265d;
+      -moz-transform: rotate(45deg);
+      -ms-transform: rotate(45deg);
+      -webkit-transform: rotate(45deg);
+      transform: rotate(45deg); }
+    .voices--list li .txt h4 {
+      line-height: 1.3333;
+      margin: 0 0 10px 0;
+      font-size: 1.9rem; }
+      .voices--list li .txt h4 .tag {
+        margin-right: 1em;
+        padding: 3px 6px;
+        color: #fff;
+        font-size: 1.5rem;
+        background: #e60113; }
+  .voices--list li:nth-child(2n) figure {
+    order: 2; }
+  .voices--list li:nth-child(2n) .txt {
+    order: 1; }
+    .voices--list li:nth-child(2n) .txt:before {
+      left: auto;
+      right: -7px;
+      -moz-transform: rotate(-135deg);
+      -ms-transform: rotate(-135deg);
+      -webkit-transform: rotate(-135deg);
+      transform: rotate(-135deg); }
+
+dl.info-label {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap; }
+  dl.info-label dt {
+    max-width: 150px;
+    width: 100%;
+    background: #00255c;
+    margin: 0.25rem 0;
+    padding: 0.5rem;
+    color: #ffff;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center; }
+  dl.info-label dd {
+    max-width: 1050px;
+    width: 100%;
+    padding: 1rem;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center; }
+
+.profile {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  background-color: #f9f9f9;
+  padding: 2rem; }
+  .profile figure {
+    width: auto;
+    margin: 0 2rem 1rem 0;
+    min-width: 125px;
+    max-width: 175px;
+    flex-grow: 1;
+    flex-shrink: 0; }
+    .profile figure img {
+      width: auto; }
+  .profile.min {
+    margin: 0 1rem 1rem 0; }
+  .profile .profile--txt {
+    width: auto;
+    flex-shrink: 10; }
+    .profile .profile--txt .name {
+      font-size: 2rem;
+      font-weight: 500;
+      color: #02275e;
+      padding: 10px;
+      margin-bottom: 20px;
+      background: #f3f3f3; }
+      .profile .profile--txt .name span {
+        color: #1f1f1f; }
+  .profile.wide {
+    background-color: #f0f0f0;
+    padding: 2rem; }
+  .profile.col2 {
+    flex-wrap: wrap;
+    padding: 0; }
+    .profile.col2 .profile--txt {
+      width: calc(100%/2 - 2rem);
+      background-color: #f0f0f0;
+      margin-bottom: 2rem;
+      padding: 2rem; }
+      .profile.col2 .profile--txt:nth-child(2n) {
+        margin-left: 2rem; }
+  .profile .profile--txt .name {
+    font-size: 2rem;
+    font-weight: bold;
+    color: #00255c;
+    padding: 0.5rem 0;
+    display: inline-block;
+    background: none;
+    border-bottom: 1px solid #00255c; }
+
+.event--reception--closed {
+  padding: 30px 80px;
+  font-size: 2rem;
+  font-weight: 700;
+  background: #efefef;
+  margin-top: 50px;
+  display: inline-block; }
+
+.tabs .tab_click {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  background: #efefef; }
+  .tabs .tab_click .tab_item {
+    width: calc(100% / 2);
+    background-color: #eef0f3;
+    font-size: 1.3rem;
+    text-align: center;
+    color: #475365;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+    padding: 1.6rem 1rem;
+    font-weight: bold;
+    transition: all 0.2s ease;
+    cursor: pointer;
+    margin-bottom: 1rem;
+    border: 1px solid #ffffff;
+    box-sizing: border-box;
+    text-decoration: none; }
+    .tabs .tab_click .tab_item.third {
+      width: calc(100% / 3); }
+    .tabs .tab_click .tab_item:hover {
+      opacity: 0.75; }
+    .tabs .tab_click .tab_item.clicked {
+      background-color: #475365;
+      color: #fff; }
+    .tabs .tab_click .tab_item.kpmg {
+      background: #013088 !important;
+      color: #ffffff !important; }
+    .tabs .tab_click .tab_item.gt {
+      background: #713f9a !important;
+      color: #ffffff !important; }
+    .tabs .tab_click .tab_item.ey {
+      background: #ffb400 !important;
+      color: #ffffff !important; }
+
+.btn--wrap.reserve-single div {
+  width: 100%;
+  margin: 0 auto; }
+
+@media only screen and (max-width: 767px) {
+  .mainVisual.logo-min {
+    max-width: 200px;
+    margin: 3rem auto 4rem; }
+
+  .seminar-info {
+    text-align: left; }
+    .seminar-info p {
+      font-size: 1.2rem;
+      margin-bottom: 1rem; }
+      .seminar-info p br {
+        display: block; }
+
+  dl.info-label dt {
+    max-width: 100%;
+    width: 100%; }
+  dl.info-label dd {
+    max-width: 100%;
+    width: 100%; }
+
+  .profile {
+    margin-top: 15px;
+    display: block; }
+    .profile figure {
+      max-width: 155px;
+      text-align: center;
+      margin: 0 auto; }
+    .profile .profile--txt {
+      margin: 0; }
+      .profile .profile--txt .name {
+        font-size: 1.4rem;
+        margin: 2rem auto;
+        display: block;
+        text-align: center;
+        width: 155px; }
+        .profile .profile--txt .name.long {
+          width: 200px; }
+    .profile.wide {
+      padding: 1rem; }
+    .profile.col2 .profile--txt {
+      width: 100%; }
+      .profile.col2 .profile--txt:nth-child(2n) {
+        margin-left: 0; }
+    .profile.wide .profile--txt .name, .profile.col2 .profile--txt .name {
+      font-size: 1.4rem;
+      margin: 1rem auto;
+      display: inline-block;
+      text-align: left;
+      width: auto; }
+
+  .logo--box li {
+    width: calc(100%/2 - 20px); }
+
+  .boxstyle.col2 .item {
+    width: 100%; }
+    .boxstyle.col2 .item:nth-child(2n) {
+      margin: 1rem 0; }
+  .boxstyle.col3 .item {
+    width: 100%; }
+    .boxstyle.col3 .item:nth-child(3n-1) {
+      margin: 1rem 0; }
+
+  .days--cnt li {
+    line-height: 1.5; }
+    .days--cnt li:before {
+      top: 4px;
+      width: 14px;
+      height: 10px; }
+
+  .voices {
+    margin-top: 24px;
+    padding: 15px; }
+    .voices li {
+      padding-left: 2em; }
+      .voices li:before {
+        width: 20px;
+        height: 16px; }
+
+  .voices--list li {
+    margin-top: 20px; }
+    .voices--list li figure {
+      width: 20%; }
+    .voices--list li .txt {
+      width: 75%;
+      padding: 15px;
+      font-size: 1.1rem; }
+      .voices--list li .txt h4 .tag {
+        display: block;
+        margin: 0 0 6px;
+        font-size: 1.1rem; }
+
+  .event--reception--closed {
+    padding: 20px 30px;
+    font-size: 1.3rem; }
+
+  .tabs .tab_click .tab_item {
+    font-size: 1.1rem;
+    padding: 10px 5px;
+    line-height: 1.4; }
+    .tabs .tab_click .tab_item.third {
+      padding: 2rem 0.5rem; } }
+/*===============================================
+event_detail_audit(individual Specials)
+/*=============================================*/
+.company--logo {
+  text-align: center; }
+
+h3.title {
+  font-size: 2rem;
+  line-height: 1.2; }
+  h3.title.gtbg {
+    background: #f4f2fa;
+    color: #713f9a; }
+  h3.title.eybg {
+    background: #fff7e2;
+    color: #ffb400; }
+  h3.title.kpmgbg {
+    background: #e7efff;
+    color: #013088; }
+  h3.title.pwcbg {
+    background: #f9e5d6;
+    color: #fb6d05; }
+  h3.title span.ttl--cnt {
+    font-size: 1.8rem; }
+  h3.title span.sem_name,
+  h3.title span.sem_date {
+    font-size: 1.6rem; }
+  h3.title span.sem_date {
+    display: inline-block;
+    margin-bottom: 1rem; }
+
+a.event-btn {
+  max-width: 600px;
+  width: 100%;
+  display: block;
+  text-align: center;
+  padding: 20px;
+  font-size: 2.2rem;
+  text-decoration: none;
+  color: #fff;
+  margin: 5rem auto;
+  box-shadow: 1px 1px 2px #a5a5a5; }
+  a.event-btn.gtbg {
+    background: #713f9a; }
+  a.event-btn.eybg {
+    background: #ffb400; }
+  a.event-btn.kpmgbg {
+    background: #013088; }
+  a.event-btn.pwcbg {
+    background: #fb6d05; }
+  a.event-btn:hover {
+    opacity: 0.9; }
+
+.appeal--list li {
+  display: flex;
+  margin-bottom: 2.5rem;
+  padding: 12px;
+  min-height: 150px;
+  border: 1px solid rgba(180, 180, 180, 0.5); }
+  .appeal--list li .ttl {
+    min-width: 125px;
+    width: auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #ffffff;
+    background: #00255c;
+    font-size: 1.7rem;
+    font-weight: 700; }
+  .appeal--list li .txt {
+    display: flex;
+    flex-wrap: wrap;
+    padding: 1rem 2rem; }
+    .appeal--list li .txt h4 {
+      width: 100%;
+      font-size: 2.6rem;
+      line-height: 1.5;
+      margin: 0 0 1rem 0; }
+      .appeal--list li .txt h4.gtbg {
+        color: #6f3d9a; }
+    .appeal--list li .txt p {
+      font-size: 1.3rem;
+      margin: 0; }
+.appeal--list.gtcolor li {
+  border: 1px solid #6f3d9a; }
+  .appeal--list.gtcolor li .ttl {
+    background: #6f3d9a; }
+
+figure.banner a img {
+  width: 100%; }
+
+.eventbox-style {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap; }
+  .eventbox-style dl {
+    display: block;
+    width: calc(100%/3 - 20px);
+    background: #f3f3f3;
+    padding: 1.5rem;
+    box-shadow: 5px 5px 3px #dedede;
+    margin: 0 1rem; }
+    .eventbox-style dl dt {
+      display: block;
+      background-color: #00255c;
+      color: #ffffff;
+      padding: 1rem;
+      border-radius: 40px;
+      text-align: center; }
+    .eventbox-style dl dd {
+      display: block;
+      width: 100%;
+      padding: 1.5rem 0; }
+      .eventbox-style dl dd p span {
+        background-color: #dedede;
+        padding: 0.75rem;
+        color: #6f6f6f;
+        display: inline-block;
+        margin: 0 0 0.85rem 0; }
+
+.pwc_catch {
+  background: url(https://img.jusnet.co.jp/career/event/catch_pwc.gif) no-repeat center;
+  min-height: 322px;
+  position: relative;
+  margin-top: 60px; }
+  .pwc_catch p {
+    color: #fb6d05;
+    position: relative;
+    left: 315px;
+    top: 70px;
+    font-size: 1.6rem;
+    font-weight: bold; }
+
+@media only screen and (max-width: 767px) {
+  a.event {
+    padding: 15px;
+    font-size: 1.5rem;
+    margin-top: 20px; }
+
+  h3.title {
+    line-height: 1; }
+    h3.title span.sem_name,
+    h3.title span.sem_date {
+      font-size: 1.4rem; }
+    h3.title span.sem_date {
+      margin-bottom: 1.5rem; }
+    h3.title.purplebg {
+      font-size: 1.4rem;
+      line-height: 1.8; }
+      h3.title.purplebg span.ttl--cnt {
+        font-size: 1.25rem; }
+
+  .appeal--list li {
+    margin-bottom: 20px;
+    padding: 15px;
+    flex-wrap: wrap; }
+    .appeal--list li .ttl {
+      width: 100%;
+      font-size: 1.3rem;
+      padding: 6px;
+      margin-bottom: 20px; }
+    .appeal--list li .txt {
+      width: 100%;
+      padding: 0; }
+      .appeal--list li .txt h4 {
+        font-size: 1.7rem; }
+
+  .eventbox-style {
+    flex-direction: column; }
+    .eventbox-style dl {
+      width: auto;
+      margin: 1rem; }
+
+  .pwc_catch p {
+    left: auto;
+    top: 5vh;
+    padding: 1rem; } }

@@ -1,0 +1,240 @@
+@charset "utf-8";
+
+/*===============================================
+event_detail_audit(individual Specials)
+/*=============================================*/
+
+.company--logo {
+	text-align: center;
+}
+
+h3.title {
+	font-size: 2rem;
+	line-height: 1.2;
+	&.gtbg{
+		background: $gt-color1;
+		color: $gt-color2;
+	}
+	&.eybg{
+		background: $ey-color1;
+		color: $ey-color2;
+	}
+	&.kpmgbg{
+		background: $kpmg-color1;
+		color: $kpmg-color2;
+	}
+	&.pwcbg{
+		background: $pwc-color1;
+		color: $pwc-color2;
+	}
+	span.ttl--cnt {
+		font-size: 1.8rem;
+	}
+	span.sem_name,
+	span.sem_date{
+		font-size: 1.6rem;
+	}
+	span.sem_date{
+		display: inline-block;
+		margin-bottom: 1rem;
+	}
+}
+
+a.event-btn {
+	max-width: 600px;
+	width: 100%;
+	display: block;
+	text-align: center;
+	padding: 20px;
+	font-size: 2.2rem;
+	text-decoration: none;
+	color: #fff;
+	margin: 5rem auto;
+	box-shadow: 1px 1px 2px #a5a5a5;
+	&.gtbg{
+		background: $gt-color2;
+	}
+	&.eybg{
+		background: $ey-color2;
+	}
+	&.kpmgbg{
+		background: $kpmg-color2;
+	}
+	&.pwcbg{
+		background: $pwc-color2;
+	}
+	&:hover {
+		opacity: 0.9;
+	}
+}
+
+.appeal--list {
+	li { 
+    display: flex;
+    margin-bottom: 2.5rem;
+    padding: 12px;
+    min-height: 150px;
+    border: 1px solid rgba(180, 180, 180, 0.5);
+		
+		.ttl {
+			min-width: 125px;
+			width: auto;
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			color: #ffffff;
+			background: $jc-color;
+			font-size: 1.7rem;
+			font-weight: 700;
+		}
+
+		.txt {
+			display: flex;
+			flex-wrap: wrap;
+			padding: 1rem 2rem;
+
+			h4 {
+				width: 100%;
+				font-size: 2.6rem;
+				line-height: 1.5;
+				margin: 0 0 1rem 0;
+				&.gtbg {
+					color: $gt-color3;
+				}
+			}
+
+			p {
+				font-size: 1.3rem;
+				margin: 0;
+			}
+		}
+	}
+	&.gtcolor li {
+		border: 1px solid $gt-color3;
+		.ttl{
+			background: $gt-color3;
+		}
+	}
+}
+
+figure.banner {
+	a{
+		img {
+			width: 100%;
+		}
+	}
+}
+
+.eventbox-style{
+	display: flex;
+	flex-direction: row;
+	flex-wrap: wrap;
+	dl {
+		display: block;
+    width: calc(100%/3 - 20px);
+    background: #f3f3f3;
+    padding: 1.5rem;
+    box-shadow: 5px 5px 3px #dedede;
+    margin: 0 1rem;
+		dt {
+			display: block;
+			background-color: $jc-color;
+			color: #ffffff;
+			padding: 1rem;
+			border-radius: 40px;
+   		text-align: center;
+		}
+		dd{
+			display: block;
+			width: 100%;
+			padding: 1.5rem 0;
+			p {
+				span{
+					background-color: #dedede;
+					padding: 0.75rem;
+					color: #6f6f6f;
+					display: inline-block;
+					margin: 0 0 0.85rem 0;
+				}
+			}
+		}
+	}
+}
+
+.pwc_catch {
+	background: url(https://img.jusnet.co.jp/career/event/catch_pwc.gif) no-repeat center;
+	min-height: 322px;
+	position: relative;
+	margin-top: 60px;
+	p {
+		color: $pwc-color2;
+		position: relative;
+    left: 315px;
+    top: 70px;
+		font-size: 1.6rem;
+    font-weight: bold;
+	}
+}
+
+
+@media only screen and (max-width: 767px) {
+  a.event {
+    padding: 15px;
+    font-size: 1.5rem;
+    margin-top: 20px;
+  }
+	
+	h3.title{
+		line-height: 1;
+		span.sem_name,
+		span.sem_date{
+			font-size: 1.4rem;
+		}
+		span.sem_date{
+			margin-bottom: 1.5rem;
+		}
+		&.purplebg {
+			font-size: 1.4rem;
+			line-height: 1.8;
+			span.ttl--cnt {
+				font-size: 1.25rem;
+			}
+		}
+	}
+
+  .appeal--list li {
+    margin-bottom: 20px;
+    padding: 15px;
+    flex-wrap: wrap;
+
+    .ttl {
+      width: 100%;
+      font-size: 1.3rem;
+      padding: 6px;
+      margin-bottom: 20px;
+    }
+
+    .txt {
+      width: 100%;
+      padding: 0;
+
+      h4 {
+        font-size: 1.7rem;
+      }
+    }
+  }
+	.eventbox-style{
+		flex-direction: column;
+		dl {
+			width: auto;
+			margin: 1rem;
+		}
+	}
+	.pwc_catch {
+		p {
+		left: auto;
+    top: 5vh;
+    padding: 1rem;
+		}
+	}
+}

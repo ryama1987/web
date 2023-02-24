@@ -1,0 +1,425 @@
+@charset "utf-8";
+
+/*===============================================
+event_list
+/*=============================================*/
+
+.event--search {
+  .search--form {
+    padding: 30px;
+    background: #f3f3f3;
+
+    .form--cnt {
+      display: flex;
+      justify-content: space-between;
+    }
+  }
+
+  .theme {
+    width: 372px;
+  }
+
+  .area, .status {
+    width: 243px;
+  }
+
+  select {
+    position: relative;
+    width: 100%;
+    font-size: 1.5rem;
+    color: #00255c;
+    padding: 20px 20px;
+    border: 2px solid #00255c;
+    -moz-border-radius: 7px;
+    -webkit-border-radius: 7px;
+    border-radius: 7px;
+    -moz-appearance: none;
+    -webkit-appearance: none;
+    appearance: none;
+    background: #fff url(https://img.jusnet.co.jp/career/common/select-arrow.svg) no-repeat right center;
+    background-size: 38px 70px;
+  }
+
+  button {
+    flex-basis: 228px;
+    -moz-appearance: none;
+    -webkit-appearance: none;
+    border: none;
+    outline: none;
+    color: #fff;
+    display: inline-block;
+    background: #92d146;
+    font-size: 2rem;
+    -moz-transition: all, 0.3s, ease, 0.3s;
+    -o-transition: all, 0.3s, ease, 0.3s;
+    -webkit-transition: all, 0.3s, ease, 0.3s;
+    transition: all, 0.3s, ease, 0.3s;
+    cursor: pointer;
+    -moz-border-radius: 7px;
+    -webkit-border-radius: 7px;
+    border-radius: 7px;
+
+    &:hover {
+      background: #00255c;
+    }
+  }
+
+  .detail {
+    margin-top: 5px;
+    text-align: right;
+    font-size: 1.5rem;
+
+    a {
+      color: #00255c;
+      text-decoration: underline;
+    }
+  }
+}
+
+.event--list li {
+  border-bottom: 1px dashed #d8d8d8;
+  padding: 50px 0;
+
+  .list--cnt {
+    h3 {
+      font-size: 1.7rem;
+      margin: 20px 0;
+      padding: 0;
+      border: none;
+      FONT-WEIGHT: 600;
+    }
+
+    p.info {
+      font-size: 1.3rem;
+    }
+  }
+
+  a {
+    display: flex;
+    justify-content: space-between;
+    text-decoration: none;
+
+    &:hover {
+      opacity: .5;
+    }
+  }
+
+  figure {
+    width: 300px;
+    margin-right: 50px;
+  }
+
+  .list--cnt {
+    width: 860px;
+    margin-left: 40px;
+
+    .tags {
+      margin-top: 10px;
+
+      span {
+        color: #fff;
+        background: #088dc1;
+        font-size: 1.1rem;
+        text-align: center;
+        padding: 2px 6px;
+        margin-right: 5px;
+        display: inline-block;
+
+        &.opened {
+          background: #db0505;
+        }
+
+        &.theme {
+          background: #00255c;
+        }
+
+        &.closed {
+          background: #ccc;
+        }
+      }
+    }
+  }
+}
+
+.pagination {
+  margin-top: 100px;
+  display: table;
+  width: 1200px;
+
+  &.margin--top--0 {
+    padding-top: 0;
+  }
+
+  a, span {
+    display: table-cell;
+    border: 1px solid rgba(216, 216, 216, 0.5);
+    font-size: 1.3rem;
+    color: #00255c;
+    padding: 20px;
+    text-align: center;
+  }
+
+  a:not(:first-child), span:not(:first-child) {
+    border-left: none;
+  }
+
+  a {
+    &.current, &:hover {
+      color: #fff;
+      background: #00255c;
+    }
+  }
+
+  span {
+    &.current, &:hover {
+      color: #fff;
+      background: #00255c;
+    }
+  }
+
+  a.prev:before, span.prev:before {
+    content: '';
+    display: inline-block;
+    width: 13px;
+    height: 13px;
+    background: url(../img/common/icon-arrow-right-blue.svg) no-repeat center;
+    background-size: contain;
+    vertical-align: -1px;
+    margin-right: 12px;
+    -moz-transform: scale(-1, 1);
+    -ms-transform: scale(-1, 1);
+    -webkit-transform: scale(-1, 1);
+    transform: scale(-1, 1);
+  }
+
+  a.prev:hover:before, span.prev:hover:before {
+    background-image: url(../img/common/icon-arrow-right-thin-white.svg);
+  }
+
+  a.next:after, span.next:after {
+    content: '';
+    display: inline-block;
+    width: 13px;
+    height: 13px;
+    background: url(../img/common/icon-arrow-right-blue.svg) no-repeat center;
+    background-size: contain;
+    vertical-align: -1px;
+    margin-left: 12px;
+  }
+
+  a.next:hover:after, span.next:hover:after {
+    background-image: url(../img/common/icon-arrow-right-thin-white.svg);
+  }
+}
+
+@media only screen and (max-width: 767px) {
+  .event--search {
+    .search--form {
+      padding: 15px;
+      -moz-border-radius: 5px;
+      -webkit-border-radius: 5px;
+      border-radius: 5px;
+
+      .form--cnt {
+        display: block;
+
+        .theme, .area, .status {
+          width: 100%;
+        }
+
+        .theme select {
+          margin-top: 0;
+        }
+      }
+    }
+
+    select {
+      margin-top: 9px;
+      height: 35px;
+      padding: 0 23px 0 12px;
+      line-height: 33px;
+      font-size: 1.5rem;
+      border: 1px solid #00255c;
+      -moz-border-radius: 3px;
+      -webkit-border-radius: 3px;
+      border-radius: 3px;
+      background-size: 16px 35px;
+    }
+
+    button {
+      margin-top: 9px;
+      width: 100%;
+      height: 35px;
+      font-size: 1.5rem;
+      line-height: 35px;
+      -moz-border-radius: 3px;
+      -webkit-border-radius: 3px;
+      border-radius: 3px;
+    }
+
+    .detail {
+      margin-top: 9px;
+      text-align: center;
+      font-size: 1.1rem;
+      font-weight: 300;
+    }
+  }
+
+  .event--slider--02 .event--list li {
+    padding: 0;
+    float: inherit;
+    border-bottom: none;
+    margin: 0;
+    height: inherit;
+
+    &::after {
+      background: none;
+    }
+  }
+
+  .event--list li {
+    a {
+      display: block;
+    }
+
+    figure {
+      width: 100%;
+    }
+
+    .list--cnt {
+      width: 100%;
+      margin: 10px 0 0 0;
+
+      h3 {
+        font-size: 1.5rem;
+        margin: 10px 0;
+      }
+
+      p.info {
+        font-size: 1.1rem;
+      }
+    }
+  }
+
+  .pagination {
+    padding: 0 25px;
+    margin-top: 50px;
+    width: 100%;
+
+    a, span {
+      padding: 6px;
+      font-size: 1.1rem;
+    }
+
+    a.prev:before, span.prev:before {
+      width: 10px;
+      height: 10px;
+      margin-right: 4px;
+    }
+
+    a.next:after, span.next:after {
+      width: 10px;
+      height: 10px;
+      margin-left: 4px;
+    }
+  }
+
+  .event--list li .list--cnt .tags span {
+    min-width: 75px;
+    font-size: 1.1rem;
+    margin-right: 5px;
+  }
+}
+
+/*===============================================
+event_others
+/*=============================================*/
+
+.profile {
+  display: flex;
+  justify-content: space-between;
+
+  .profile--txt {
+    max-width: 1040px;
+    margin-left: 50px;
+  }
+
+  .name {
+    font-size: 2rem;
+    font-weight: 500;
+    color: #02275e;
+    padding: 10px;
+    margin-bottom: 20px;
+    background: #f3f3f3;
+
+    span {
+      color: #1f1f1f;
+    }
+  }
+}
+
+.event--reception--closed {
+  padding: 30px 80px;
+  font-size: 2rem;
+  font-weight: 700;
+  background: #efefef;
+  margin-top: 50px;
+  display: inline-block;
+}
+
+@media only screen and (max-width: 767px) {
+  .profile {
+    margin-top: 15px;
+    display: block;
+
+    figure {
+      width: 120px;
+    }
+
+    .profile--txt {
+      max-width: inherit;
+      margin: 20px 0 0 0;
+    }
+  }
+
+  .event--reception--closed {
+    padding: 20px 30px;
+    font-size: 1.3rem;
+  }
+}
+
+/*===============================================
+seminar_tohmatsu
+/*=============================================*/
+
+table td .point {
+  position: relative;
+  margin-top: 25px;
+  border: 1px solid #92d146;
+  background: #fff;
+  padding: 30px;
+
+  h5 {
+    width: 195px;
+    display: inline-block;
+    padding: 5px;
+    color: #fff;
+    background: url(https://img.jusnet.co.jp/career/search/point-bg.svg) no-repeat center;
+    background-size: contain;
+    text-align: center;
+    right: 50px;
+    position: relative;
+    font-size: 1.5rem;
+  }
+}
+
+@media only screen and (max-width: 767px) {
+  table td .point {
+    padding: 20px;
+
+    h5 {
+      font-size: 1.3rem;
+      margin-bottom: 10px;
+    }
+  }
+}
