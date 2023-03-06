@@ -514,7 +514,7 @@ $fontS100:true;
   $fontS23: 176.9%;
   $fontS24: 184.6%;
 }
-@elseif $basefontS==14px {
+@else if $basefontS==14px {
   $fontS6: 42.9%;
   $fontS7: 50.0%;
   $fontS8: 57.1%;
@@ -557,7 +557,7 @@ $fontS100:true;
   $fontS50:357.1%;
   $fontS60:428.6%;
 }
-@elseif $basefontS==16px {
+@else if $basefontS==16px {
   $fontS6: 37.50%;
   $fontS7: 43.80%;
   $fontS8: 50.00%;
@@ -599,7 +599,7 @@ $fontS100:true;
   $fontS64: 400%;
   $fontS100: 625.0%;
 }
-@elseif $basefontS==18px {
+@else if $basefontS==18px {
   $fontS6: 33.3%;
   $fontS7: 38.9%;
   $fontS8: 44.4%;
@@ -637,7 +637,7 @@ $fontS100:true;
   $fontS40: 222.2%;
   $fontS54: 300%;
 }
-@elseif $basefontS==24px {
+@else if $basefontS==24px {
   $fontS6: 25.0%;
   $fontS7: 29.2%;
   $fontS8: 33.3%;
@@ -694,7 +694,7 @@ $fontS100:true;
   $fontS59: 245.8%;
   $fontS60: 250%;
 }
-@elseif $basefontS==26px {
+@else if $basefontS==26px {
   $fontS6: 23.1%;
   $fontS7: 26.9%;
   $fontS8: 30.8%;
